@@ -2,8 +2,8 @@ class FileManager {
     
     static [void] CreateFolder([string] $folderPath)
     {
-        if(Test-Path $folderPath) { throw "Foder $folderPath already exists!"} 
-        else { New-Item -ItemType Directory -Path "$PSScriptRoot\TestFiles" -ErrorAction Stop }
+        if(Test-Path $folderPath) { throw "Folder $folderPath already exists!"} 
+        else { New-Item -ItemType Directory -Path $folderPath -ErrorAction Stop }
     }
 
     static [void] CreateTestFile ([string] $filePath, [int] $fileSizeKb)
